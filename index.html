@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NØVRA — BUILT DIFFERENT</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+
+  background:#050505;
+
+  color:#fff;
+
+  font-family:Arial,Helvetica,sans-serif;
+
+}
+
+header{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:10;
+
+  background:rgba(5,5,5,.92);
+
+  border-bottom:1px solid #222;
+
+  padding:18px 5%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.logo{font-size:24px;font-weight:900;letter-spacing:3px}
+
+nav a{
+
+  color:white;
+
+  text-decoration:none;
+
+  margin-left:25px;
+
+  font-size:13px;
+
+  letter-spacing:1px;
+
+}
+
+.hero{
+
+  min-height:88vh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  padding:40px 20px;
+
+}
+
+.hero p{
+
+  color:#999;
+
+  letter-spacing:3px;
+
+  font-size:12px;
+
+  margin-bottom:20px;
+
+}
+
+.hero h1{
+
+  font-size:clamp(55px,13vw,150px);
+
+  line-height:.85;
+
+  letter-spacing:-5px;
+
+}
+
+.hero .sub{
+
+  margin:28px 0;
+
+  color:#aaa;
+
+  letter-spacing:2px;
+
+}
+
+.btn{
+
+  display:inline-block;
+
+  background:white;
+
+  color:#050505;
+
+  text-decoration:none;
+
+  padding:15px 28px;
+
+  font-weight:800;
+
+  letter-spacing:1px;
+
+}
+
+.visual{
+
+  width:min(330px,80vw);
+
+  margin-top:55px;
+
+  aspect-ratio:3/4;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+.shirt{
+
+  width:75%;
+
+  height:80%;
+
+  background:#111;
+
+  position:relative;
+
+  clip-path:polygon(28% 0,40% 8%,60% 8%,72% 0,100% 25%,83% 42%,76% 32%,76% 100%,24% 100%,24% 32%,17% 42%,0 25%);
+
+  border:1px solid #333;
+
+}
+
+.shirt span{
+
+  position:absolute;
+
+  top:48%;
+
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  font-size:22px;
+
+  font-weight:900;
+
+  letter-spacing:4px;
+
+}
+
+section{
+
+  padding:90px 6%;
+
+  border-top:1px solid #1d1d1d;
+
+}
+
+.title{
+
+  font-size:12px;
+
+  color:#888;
+
+  letter-spacing:3px;
+
+  margin-bottom:12px;
+
+}
+
+h2{
+
+  font-size:clamp(35px,7vw,75px);
+
+  letter-spacing:-3px;
+
+  margin-bottom:40px;
+
+}
+
+.products{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+.card{
+
+  background:#0d0d0d;
+
+  border:1px solid #222;
+
+  padding:20px;
+
+}
+
+.card .visual{
+
+  width:100%;
+
+  height:auto;
+
+  margin:0 0 25px;
+
+  aspect-ratio:1/1;
+
+}
+
+.card h3{
+
+  font-size:14px;
+
+  letter-spacing:2px;
+
+}
+
+.price{
+
+  color:#aaa;
+
+  margin-top:8px;
+
+}
+
+.story{
+
+  max-width:900px;
+
+}
+
+.story p{
+
+  color:#aaa;
+
+  font-size:20px;
+
+  line-height:1.7;
+
+}
+
+form{
+
+  max-width:600px;
+
+  display:flex;
+
+  gap:10px;
+
+}
+
+input{
+
+  flex:1;
+
+  padding:16px;
+
+  background:#111;
+
+  border:1px solid #333;
+
+  color:white;
+
+}
+
+button{
+
+  padding:16px 25px;
+
+  border:0;
+
+  background:white;
+
+  font-weight:bold;
+
+}
+
+footer{
+
+  padding:35px 6%;
+
+  border-top:1px solid #222;
+
+  color:#666;
+
+  font-size:12px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+}
+
+@media(max-width:700px){
+
+  header{padding:15px 20px}
+
+  nav a{margin-left:10px;font-size:10px}
+
+  .hero{min-height:82vh}
+
+  .hero h1{letter-spacing:-3px}
+
+  section{padding:65px 20px}
+
+  .products{grid-template-columns:1fr}
+
+  .products .visual{width:80%;margin:auto;margin-bottom:20px}
+
+  form{flex-direction:column}
+
+  footer{flex-direction:column;gap:10px}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">NØVRA</div>
+
+  <nav>
+
+    <a href="#drop">DROP</a>
+
+    <a href="#story">STORY</a>
+
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+  <p>DROP 001 — COMING SOON</p>
+
+  <h1>BUILT<br>DIFFERENT.</h1>
+
+  <div class="sub">STREETWEAR. IDENTITY. ATTITUDE.</div>
+
+  <a class="btn" href="#drop">DÉCOUVRIR LE DROP</a>
+
+  <div class="visual">
+
+    <div class="shirt"><span>NØVRA</span></div>
+
+  </div>
+
+</section>
+
+<section id="drop">
+
+  <div class="title">PREMIER DROP</div>
+
+  <h2>OVERSIZED TEE.</h2>
+
+  <div class="products">
+
+    <div class="card">
+
+      <div class="visual">
+
+        <div class="shirt"><span>NØVRA</span></div>
+
+      </div>
+
+      <h3>FRONT</h3>
+
+      <div class="price">39 €</div>
+
+    </div>
+
+    <div class="card">
+
+      <div class="visual">
+
+        <div class="shirt"><span>NØVRA</span></div>
+
+      </div>
+
+      <h3>BACK</h3>
+
+      <div class="price">39 €</div>
+
+    </div>
+
+    <div class="card">
+
+      <div class="visual">
+
+        <div class="shirt"><span>NØVRA</span></div>
+
+      </div>
+
+      <h3>DETAIL</h3>
+
+      <div class="price">39 €</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="story">
+
+  <div class="story">
+
+    <div class="title">THE BRAND</div>
+
+    <h2>WE DON'T FOLLOW.<br>WE CREATE.</h2>
+
+    <p>
+
+      NØVRA est une marque créée pour ceux qui veulent
+
+      construire leur propre identité. Des pièces simples,
+
+      fortes et pensées pour sortir du lot.
+
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="title">STAY CONNECTED</div>
+
+  <h2>DON'T MISS THE DROP.</h2>
+
+  <form onsubmit="event.preventDefault();alert('Bienvenue chez NØVRA.');">
+
+    <input type="email" placeholder="Ton adresse email" required>
+
+    <button type="submit">REJOINDRE</button>
+
+  </form>
+
+</section>
+
+</main>
+
+<footer>
+
+  <span>© 2026 NØVRA</span>
+
+  <span>BUILT DIFFERENT.</span>
+
+</footer>
+
+</body>
+
+</html>
